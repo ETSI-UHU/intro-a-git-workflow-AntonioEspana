@@ -3,6 +3,8 @@ package pkg;
 import java.util.Scanner;
 
 public class Calculadora {
+	
+
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -34,12 +36,7 @@ public class Calculadora {
                 System.out.println("Resultado: " + resultado);
                 break;
             case '/':
-                if (num2 != 0) {
-                    resultado = num1 / num2;
-                    System.out.println("Resultado: " + resultado);
-                } else {
-                    System.out.println("Error: División por cero no permitida.");
-                }
+			division(num1, num2);
                 break;
             default:
                 System.out.println("Operador no válido.");
@@ -47,4 +44,14 @@ public class Calculadora {
 
         scanner.close();
     }
+
+	private static void division(double num1, double num2) {
+		double resultado;
+		if (num2 != 0) {
+		    resultado = num1 / num2;
+		    System.out.println("Resultado: " + resultado);
+		} else {
+		    System.out.println("Error: División por cero no permitida.");
+		}
+	}
 }
