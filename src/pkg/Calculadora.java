@@ -3,6 +3,10 @@ package pkg;
 import java.util.Scanner;
 
 public class Calculadora {
+	
+	public static double suma(double a, double b) {
+		return a + b;
+	}
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -22,7 +26,7 @@ public class Calculadora {
 
         switch (operador) {
             case '+':
-                resultado = num1 + num2;
+                resultado = suma(num1,num2);
                 System.out.println("Resultado: " + resultado);
                 break;
             case '-':
