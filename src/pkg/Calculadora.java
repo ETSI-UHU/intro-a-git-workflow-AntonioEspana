@@ -4,6 +4,10 @@ import java.util.Scanner;
 
 public class Calculadora {
 
+	public static double multiplicacion(double a, double b) {
+		return a * b;
+	}
+	
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -30,7 +34,7 @@ public class Calculadora {
                 System.out.println("Resultado: " + resultado);
                 break;
             case '*':
-                resultado = num1 * num2;
+                resultado = multiplicacion(num1, num2);
                 System.out.println("Resultado: " + resultado);
                 break;
             case '/':
